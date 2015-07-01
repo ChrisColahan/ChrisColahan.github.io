@@ -1,20 +1,62 @@
 
+@keyframes info-bar-item-fade-in {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: block;
+		opacity: 0;
+	}
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@keyframes info-bar-item-fade-out {
+	0% {
+		display: block;
+		opacity: 1;
+	}
+	99% {
+		display: block;
+		opacity: 0
+	}
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
 html, body {
-	height: 100%;
-	width: 100%;
-	background-size:100% auto;
-	background-image: url("http://guardianlv.com/wp-content/uploads/2014/07/NASA-Budget-Photo.jpg");
+	height: 100vw;
+	width: 100vh;
+	background-size: 100% auto;
+	background-color: #F0F0F0;
 }
 
-div {
-	border-style: dashed;
-	border-width: 10px;
-	border-color: #CC0099;
+.info-bar-item {
+	width: 95vw;
 }
 
-p {
-	border-style: dashed;
-	border-width: 5px;
-	border-color: #990055;
-	color: #55FF55;
+.info-bar-item .feed-link {
+	text-decoration: none;
+	border-bottom: 1px solid #303030;
 }
+
+.info-bar-item .feed-link .feed-title {
+	font-size: 1.2em;
+	color: #000000;
+	border-bottom: 1px solid #C0C0C0;
+	padding-top: 1.1em;
+}
+
+.info-bar-item .feed-link .feed-content {
+	font-size: 0.8em;
+	color: #707070;
+	border-bottom: 2px solid #303030;
+	padding-bottom: 1.5em;
+	padding-left: 1.5em;
+}
+
