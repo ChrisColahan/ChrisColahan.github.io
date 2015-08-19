@@ -25,4 +25,22 @@ function Feed(feedURL, elementId) {
 
 	load();
 	setInterval(function() {load();}, 10000);
+
+	$("#google-news").click(function() {
+		$("#world-news").css('display', 'block')
+		.siblings()
+		.css('display', 'none');
+	});
+
+	$("#reddit-news").click(function() {
+		$("#reddit-programming").css('display', 'block')
+		.siblings()
+		.css('display', 'none');
+	});
+
+	$("#acm-news").click(function() {
+		$("#acm").css('display', 'block')
+		.siblings()
+		.css('display', 'none');
+	});
 }

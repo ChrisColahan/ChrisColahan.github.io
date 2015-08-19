@@ -1,43 +1,15 @@
 
-@keyframes info-bar-item-fade-in {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
-}
-
-@keyframes info-bar-item-fade-out {
-	0% {
-		display: block;
-		opacity: 1;
-	}
-	99% {
-		display: block;
-		opacity: 0
-	}
-	100% {
-		display: none;
-		opacity: 0;
-	}
-}
-
 html, body {
-	height: 100vw;
-	width: 100vh;
+	height: 100%;
+	width: 100%;
 	background-size: 100% auto;
 	background-color: #F0F0F0;
+	margin-left: 0px; /* sketchy hack */
 }
 
 .info-bar-item {
-	width: 95vw;
+	margin-left: 100px;
+	display: none;
 }
 
 .info-bar-item .feed-link {
@@ -58,5 +30,25 @@ html, body {
 	border-bottom: 2px solid #303030;
 	padding-bottom: 1.5em;
 	padding-left: 1.5em;
+}
+
+#background {
+	/*add something here*/
+}
+
+#sidebar {
+	position: fixed;
+	width: auto;
+	overflow-y: scroll;
+	top: 0;
+	bottom: 0;
+}
+
+.sidebar-item {
+	margin-right: 8px;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: block;
 }
 

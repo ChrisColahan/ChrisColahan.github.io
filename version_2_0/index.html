@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- Google RSS feed reader -->
+		<script src="https://www.google.com/jsapi"></script>
+
+		<!-- Custom utility javascript -->
+		<script src="js/utils.js"></script>
+		
+		<!-- Custom javascript for loading elements via ajax calls -->
+		<script src="js/filler.js"></script>
+
+		<!-- Custom css -->
+		<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+
+		<title>WIZARDRY_2.0</title>
+	</head>
+	<body>
+		<div id="background">
+			<!--set by css-->
+		</div>
+
+		{templates/bars.html}
+		
+		<!-- Add the RSS feeds -->
+		<script>
+			{templates/rssGenScripts.js}
+		</script>
+
+		<!-- And that's all folks! -->
+
+	</body>
+</html>
