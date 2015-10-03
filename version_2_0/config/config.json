@@ -1,0 +1,29 @@
+{
+	"side_items":[
+		{
+			
+			"name":"google_news",
+			"icon_url":"img/google.png",
+			"type":"rss",
+
+			"rss_url":"https://news.google.com/?output=rss",
+			"rss_num_items":5
+		},
+		{
+			"name":"acm",
+			"icon_url":"img/acm.jpg",
+			"type":"rss",
+			
+			"rss_url":"http://rss.acm.org/technews/TechNews.xml",
+			"rss_num_items":5
+		},
+		{
+			"name":"reddit-programming",
+			"icon_url":"img/reddit.jpg",
+			"type":"rss",
+			
+			"rss_url":"http://www.reddit.com/r/programming/.rss",
+			"rss_num_items":5
+		}
+	]
+}

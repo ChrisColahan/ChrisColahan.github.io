@@ -25,22 +25,29 @@ function Feed(feedURL, elementId) {
 
 	load();
 	setInterval(function() {load();}, 10000);
-
-	$("#google-news").click(function() {
-		$("#world-news").css('display', 'block')
+	
+	$("#" + elementId + "_sidebar").click(function() {
+		$("#" + elementId).css('display', 'block')
 		.siblings()
 		.css('display', 'none');
 	});
+}
 
-	$("#reddit-news").click(function() {
-		$("#reddit-programming").css('display', 'block')
-		.siblings()
-		.css('display', 'none');
-	});
+function Element(jsonElement) {
+	$("#sidebar").append("<a id='" + jsonElement.name + "_sidebar' class='sidebar-item'><img src='" + jsonElement.icon_url + "'></img></a>");
+	
+	$("#info-bar").append("<div class='info-bar-item' id='" + jsonElement.name + "'></div>");
+	
+	if(jsonElement.type === 'rss') {
+		new Feed(jsonElement.rss_url, jsonElement.name);
+	}
+}
 
-	$("#acm-news").click(function() {
-		$("#acm").css('display', 'block')
-		.siblings()
-		.css('display', 'none');
+function loadFromConfig(configFile) {
+	$.getJSON(configFile, function(result) {
+		for(var i = 0; i < result.side_items.length; i++) {
+			var jsonElement = result.side_items[i];
+			new Element(jsonElement);
+		}
 	});
 }

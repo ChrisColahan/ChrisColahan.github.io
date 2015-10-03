@@ -12,9 +12,6 @@
 
 		<!-- Custom utility javascript -->
 		<script src="js/utils.js"></script>
-		
-		<!-- Custom javascript for loading elements via ajax calls -->
-		<script src="js/filler.js"></script>
 
 		<!-- Custom css -->
 		<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
@@ -28,29 +25,17 @@
 
 		<div id="sidebar">
 			<!--modified by css-->
-			<a id="google-news" class="sidebar-item">
-				<img src="img/google.png"></img>
-			</a>
-			<a id="reddit-news" class="sidebar-item">
-				<img src="img/reddit.jpg"></img>
-			</a>
-			<a id="acm-news" class="sidebar-item">
-				<img src="img/acm.jpg"></img>
-			</a>
+			<!-- loaded from config.json -->
 		</div>
 
 		<div id="info-bar">
 			<!-- all are filled by javascript and styled by css -->
-			<div class="info-bar-item" id="world-news"></div>
-			<div class="info-bar-item" id="reddit-programming"></div>
-			<div class="info-bar-item" id="acm"></div>
+			<!-- loaded from config.json -->
 		</div>
 		
 		<!-- Add the RSS feeds -->
 		<script>
-			new Feed("https://news.google.com/?output=rss", "world-news");
-			new Feed("http://www.reddit.com/r/programming/.rss", "reddit-programming");
-			new Feed("http://rss.acm.org/technews/TechNews.xml", "acm");
+			loadFromConfig("config/config.json");
 		</script>
 
 		<!-- And that's all folks! -->
