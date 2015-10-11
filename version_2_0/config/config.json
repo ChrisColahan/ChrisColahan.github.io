@@ -24,6 +24,13 @@
 			
 			"rss_url":"http://www.reddit.com/r/programming/.rss",
 			"rss_num_items":5
+		},
+		{
+			"name":"background-image",
+			"icon_url":"img/home.png",
+			"type":"background",
+
+			"background_image":"img/background_night_sky_1900_600.jpg"
 		}
 	]
 }
