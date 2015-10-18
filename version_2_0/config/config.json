@@ -1,20 +1,19 @@
 {
 	"side_items":[
 		{
+			"name":"background-image",
+			"icon_url":"img/home.png",
+			"type":"background",
+
+			"background_image":"img/background_night_sky_1900_600.jpg"
+		},
+		{
 			
 			"name":"google_news",
 			"icon_url":"img/google.png",
 			"type":"rss",
 
 			"rss_url":"https://news.google.com/?output=rss",
-			"rss_num_items":5
-		},
-		{
-			"name":"acm",
-			"icon_url":"img/acm.jpg",
-			"type":"rss",
-			
-			"rss_url":"http://rss.acm.org/technews/TechNews.xml",
 			"rss_num_items":5
 		},
 		{
@@ -26,11 +25,13 @@
 			"rss_num_items":5
 		},
 		{
-			"name":"background-image",
-			"icon_url":"img/home.png",
-			"type":"background",
-
-			"background_image":"img/background_night_sky_1900_600.jpg"
+			"name":"acm",
+			"icon_url":"img/acm.jpg",
+			"type":"rss",
+			
+			"rss_url":"http://rss.acm.org/technews/TechNews.xml",
+			"rss_num_items":5
 		}
+
 	]
 }
