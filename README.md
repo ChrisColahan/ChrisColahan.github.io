@@ -66,6 +66,7 @@ Note the structure of the JSON:
 NOTE: the sidebar is ordered in the order items appear in the config.
 
 The whole config is a single JSON object conatining an array named side_items. Each object in side_items corresponds to an item on the sidebar that can be clicked. Here is a list of the required attributes and the valid values that can be in them:
+
 Attribute | valid values | description
 --------- | ------------ | -----------
 name      | String (must be unique) | A name for your item. Must be unique. Required.
@@ -73,6 +74,7 @@ icon_url  | String. must be valid url (can be relative or absolute) | Url of the
 type      | String. Valid values are background (only use one of these in your page) and rss (an rss feed) | The type of "stuff" the icon displays when clicked. Required.
 
 Here is a list of the optional values for each type:
+
 Type       | Attribute    | valid values | description
 ---------- | ------------ | ------------ | -----------
 background | backgrond_image | string. (url to the image to use) | An image to use for the background. It is better to use images that are close to the resolution of your screen. (or a common resolution)
