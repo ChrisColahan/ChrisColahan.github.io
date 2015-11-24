@@ -41,7 +41,7 @@ function Element(jsonElement) {
 	if(jsonElement.type === 'rss') {
 		new Feed(jsonElement.rss_url, jsonElement.name);
 	} else if(jsonElement.type === 'background') {
-		$("html").css({background-image: 'url(' + jsonElement.background_image + ')'});
+		$("html").css("background-image", "url(" + jsonElement.background_image + ")");
 		$("#" + jsonElement.name + "_sidebar").click(function() {
 			$("#" + jsonElement.name).css('display', 'block').siblings().css('display', 'none');
 		});
